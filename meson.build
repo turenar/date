@@ -34,7 +34,7 @@ date_dep = declare_dependency(
 
 
 use_dll = host_machine.system() == 'windows' and get_option('library_type') == 'shared'
-use_system_tz = get_option('system_tz') and not host_machine.system() == 'windows'
+use_system_tz = get_option('system_tz') and host_machine.system() != 'windows'
 
 tz_private_args = [
 	'-DUSE_AUTOLOAD=' + (get_option('system_tz') ? '0' : '1'),
