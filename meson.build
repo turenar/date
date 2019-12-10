@@ -29,7 +29,7 @@ endif
 
 # date (header only) library
 date_dep = declare_dependency(
-	include_directories: include_directories('include'),
+	include_directories: include_directories('include', is_system: true),
 	compile_args: date_args)
 
 
@@ -66,7 +66,7 @@ tz_lib = library('tz',
 tz_dep = declare_dependency(
 	link_with: tz_lib,
 	dependencies: tz_internal_deps,
-	include_directories: include_directories('include'),
+	include_directories: include_directories('include', is_system: true),
 	compile_args: tz_private_args)
 
 # WIP: install and tests
