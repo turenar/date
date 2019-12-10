@@ -59,7 +59,7 @@ if not get_option('system_tz')
 	tz_internal_deps += dependency('libcurl')
 endif
 
-tz_lib = library('tz',
+tz_lib = library('tz', 'src/tz.cpp',
 	dependencies: tz_internal_deps,
 	include_directories: include_directories('include'),
 	cpp_args: tz_private_args)
