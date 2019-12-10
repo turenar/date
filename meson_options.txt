@@ -1,0 +1,5 @@
+option('system_tz', type: 'boolean', value: false, description: 'Use the operating system\'s timezone database')
+option('tz_db_in_dot', type: 'boolean', value: false, description: 'Save the timezone database in the current folder')
+option('test', type: 'boolean', value: false, description: 'Enable unit tests')
+option('string_view', type: 'boolean', value: true, description: 'Enable string view')
+option('use_c_locale', type: 'boolean', value: false, description: 'define ONLY_C_LOCALE=1')
