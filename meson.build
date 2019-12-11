@@ -33,7 +33,7 @@ date_dep = declare_dependency(
 	compile_args: date_args)
 
 
-use_dll = host_machine.system() == 'windows' and get_option('library_type') == 'shared'
+use_dll = host_machine.system() == 'windows' and get_option('default_library') == 'shared'
 use_system_tz = get_option('system_tz') and host_machine.system() != 'windows'
 
 tz_private_args = [
